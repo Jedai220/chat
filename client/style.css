@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#main_wrapper {
+  max-width: 600px;
+  min-width: 600px;
+  min-height: 800px;
+  max-height: 800px;
+  border: 2px double blue;
+  border-radius: 25px;
+  box-shadow:
+    inset 0.5px 0.5px 10px black,
+    inset -0.5px -0.5px 10px black,
+    3px 3px 10px black,
+    -1px -1px 30px black;
+  background-color: #def;
+  margin-top: calc(30px * 5);
+  margin-bottom: calc(30px * 5);
+}
+
+#all_wrapper {
+  padding: 0 calc((100% - 600px) / 2);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+textarea {
+  max-width: 500px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: red;
+  font-weight: 900;
+  text-shadow: 1px 1px black;
+  padding: 20px;
+  min-width: 500px;
+  max-height: 130px;
+  min-height: 130px;
+  overflow: auto;
+  opacity: 50%;
+  border: 2px dotted pink;
+  margin: 0px calc((100% - 500px - 40px) / 2);
+  margin-bottom: 20px;
+}
+
+textarea:hover {
+    cursor: text;
+}
+
+#message_wrapper {
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-style: normal;   
+    font-size: 20px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    width: 500px;
+    text-align: start;
+    margin: 0px calc((100% - 500px - 8px - 14px) / 2);
+    margin-top: 30px;
+}
+
+.message_me {
+    border: 4px solid cornflowerblue;
+    padding-left: 14px;
+    border-radius: 0px 30px 30px 30px;
+}
+
+input {
+    width: 100px;
+    position: absolute;
+    left: 60%;
+    right: 40%;
+    z-index: 1;
+    margin-bottom: 20px;
+    margin-right: 10px;    
+} 
+
+#send_wrapper {
+    gap: 0;
+}
+
+#message_inputer {
+    max-height: 30px;
+    min-height: 30px;
+    max-width: 540px;
+    min-width: 540px;
+    padding: 0;
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>YES I DO THIS</title>
+  </head>
+  <body style="background-color: pink">
+    <div class="wrapper" id="all_wrapper">
+    <div id="main_wrapper" class="wrapper">
+        <input id="send_button" type="image" src="./send_button.png" alt="send">
+        <div class="wrapper" id="send_wrapper">
+            <textarea
+            id="message_sender"
+            maxlength="220"
+            placeholder="Input your message here:"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <textarea
+            id="message_inputer"
+            maxlength="47"
+            placeholder="Input your username here:"
+            cols="2"
+            rows="10"
+          ></textarea>
+        </div>
+        <div id="message_wrapper">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
