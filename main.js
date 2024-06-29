@@ -2,6 +2,7 @@ import express from "express";
 import fs from "node:fs/promises"
 import http from "node:http";
 import { WebSocketServer } from "ws";
+import morgan from 'morgan'
 
 let allMessageArray = new Array();
 const port = 8000,
@@ -9,9 +10,6 @@ const port = 8000,
 const app = express();
 app.use(express.static("client"));
 const server = http.createServer(app);
-
-
-
 
 const wss = new WebSocketServer({ server });
 wss.on("connection", (ws) => {
