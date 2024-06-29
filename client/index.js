@@ -47,8 +47,14 @@ $("input").click((e) => {
     }
     return;
   } else {
-    ws.send(`{"_type": "message", _info: "${$("#message_sender").val()}"}`);
-    ws.send(`user: ${$("#message_inputer").val()}`);
+    let message = {
+      "_user": String($("#message_inputer").val()),
+      "_message": String($("#message_sender").val())
+    };
+
+    console.log($("#message_sender").val());
+    ws.send(JSON.stringify(message));
+    ws.send(JSON.stringify(user));
     $("#message_sender").css({ border: "pink dotted" });
     $("#message_inputer").css({ border: "pink dotted" });
   }
@@ -58,8 +64,8 @@ ws.onmessage = (msg) => {
     // if (msg.data == `I LOVE SOCKET AND YOU TO BECAUSE I FEEL WEBSOCKET IN MY USEFOOL HEAD0`) {
     //     alert("0");
     // }
-    if (msg._type == "message") {
-        $("#message_wrapper").append(`<p>${msg._info}</p>`);
-    }
+    console.log(msg);
+    const _msg = JSON.parse(msg.data); 
+    $("#message_wrapper").append(`<br><div style='padding-left:30px;border :blue solid 2px;border-radius:30px' id='cont'><p style='opacity:80%'>${_msg._user}</p><h1>${_msg._message}</h3></div>`);
     console.log("I give message!");
 }
